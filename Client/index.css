@@ -1,0 +1,258 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.container{
+    margin: 3% 30%;
+    padding: 2%;
+    border: 8px solid black;
+    flex: space-around;
+    background-color: #f3ebeb
+    ;
+}
+
+.switch-field {
+	display: flex;
+	margin-bottom: 36px;
+	overflow: hidden;
+}
+
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch-field label {
+	background-color: #e4e4e4;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	line-height: 1;
+	text-align: center;
+	padding: 8px 16px;
+	margin-right: -1px;
+	border: 1px solid rgb(0, 0, 0);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+.switch-field input:checked + label {
+	background-color: #f8f2f4;
+	box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
+
+.form {
+	max-width: 270px;
+	font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
+	font-weight: normal;
+	line-height: 1.625;
+	margin: 8px auto;
+	padding-left: 16px;
+	z-index: 2;
+}
+
+h2 {
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+.area{
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 75%;
+    border: 0;
+    margin: 0 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.location{
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 300px;
+    border: 0;
+    margin: 0 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.submit{
+    background: #cfb3bc;
+    width: 300px;
+    border: 0;
+    margin: 10px 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.result{
+    background: #f7f1f1;
+    align-self: center;
+    width: 300px;
+    border: 0;
+    margin: 10px 0 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 35px;
+    text-align: center;
+}
+
+.img {
+    background: url('https://media.istockphoto.com/id/1289383957/photo/blurred-bangkok-city-night-background.jpg?s=612x612&w=0&k=20&c=703HmMWVVGZEzIidIjBe71s2btnHmSX1uJABxhkGaZs=');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size:100% 100%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body, html {
+    height: 50%;
+}
+
+
+
+
+
+
+/* Existing styles remain the same until the end */
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .container {
+        margin: 3% 15%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        margin: 3% 10%;
+    }
+    
+    .switch-field label {
+        padding: 8px 12px;
+    }
+}
+
+/* Tablet View */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin: 3% 5%;
+        padding: 3%;
+        border-width: 5px;
+    }
+    
+    .form {
+        max-width: 100%;
+    }
+    
+    .location, .submit, .result {
+        width: 100%;
+    }
+}
+
+/* Mobile View */
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 2%;
+        padding: 15px;
+        border-width: 3px;
+    }
+    
+    .switch-field {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+    
+    .switch-field label {
+        flex: 1 0 30%;
+        min-width: 80px;
+        margin-right: 0;
+        padding: 8px 5px;
+        font-size: 13px;
+    }
+    
+    .area {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .img {
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+    }
+}
+
+/* Small Mobile View */
+@media only screen and (max-width: 400px) {
+    .switch-field label {
+        flex: 1 0 45%;
+        font-size: 12px;
+        padding: 6px 3px;
+    }
+    
+    .container {
+        margin: 1%;
+        padding: 10px;
+    }
+}
+
+/* Orientation-specific adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .container {
+        margin: 1% auto;
+        max-width: 90%;
+    }
+    
+    .switch-field {
+        flex-wrap: nowrap;
+    }
+    
+    .switch-field label {
+        padding: 5px 3px;
+        font-size: 12px;
+    }
+}
+
+/* Prevent zooming on input focus in mobile */
+input[type="number"], select {
+    font-size: 16px;
+}

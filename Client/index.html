@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mumbai Real Estate Price Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="img"></div>
+<div class="container">
+    <form class="form">
+        <h2>Area (Square Feet)</h2>
+        <input class="area" type="number" id="uiarea" name="Squareft" value="1000" min="100">
+        <h2>BHK</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+            <label for="radio-bhk-1">1</label>
+            <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+            <label for="radio-bhk-2">2</label>
+            <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+            <label for="radio-bhk-3">3</label>
+            <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+            <label for="radio-bhk-4">4</label>
+            <input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+            <label for="radio-bhk-5">5</label>
+        </div>
+    </form>
+    <form class="form">
+        <h2>New</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-new-1" name="uinew" value="1" checked/>
+            <label for="radio-new-1">No</label>
+            <input type="radio" id="radio-new-2" name="uinew" value="0"/>
+            <label for="radio-new-2">Yes</label>
+        </div>
+    </form>
+    <form class="form">
+        <h2>Gymnasium</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-gym-1" name="uigym" value="1" checked/>
+            <label for="radio-gym-1">No</label>
+            <input type="radio" id="radio-gym-2" name="uigym" value="0"/>
+            <label for="radio-gym-2">Yes</label>
+        </div>
+    </form>
+    <form class="form">
+        <h2>Lift Facility</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-lift-1" name="uilift" value="1" checked/>
+            <label for="radio-lift-1">No</label>
+            <input type="radio" id="radio-lift-2" name="uilift" value="0"/>
+            <label for="radio-lift-2">Yes</label>
+        </div>
+    </form>
+    <form class="form">
+        <h2>Car Parking Facility</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-car-1" name="uicar" value="1" checked/>
+            <label for="radio-car-1">No</label>
+            <input type="radio" id="radio-car-2" name="uicar" value="0"/>
+            <label for="radio-car-2">Yes</label>
+        </div>
+    </form>
+    <form class="form">
+        <h2>Gas Connection Facility</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-gas-1" name="uigas" value="1" checked/>
+            <label for="radio-gas-1">No</label>
+            <input type="radio" id="radio-gas-2" name="uigas" value="0"/>
+            <label for="radio-gas-2">Yes</label>
+        </div>
+    </form>
+    <form class="form">
+        <h2>Swimming Pool</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-pool-1" name="uipool" value="1" checked/>
+            <label for="radio-pool-1">No</label>
+            <input type="radio" id="radio-pool-2" name="uipool" value="0"/>
+            <label for="radio-pool-2">Yes</label>
+        </div>
+    </form>
+    <div class="form">
+        <h2>Location</h2>
+        <select class="location" id="uiLocations">
+            <option value="" disabled selected>Choose a Location</option>
+        </select>
+        <br>
+        <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+        <div id="uiEstimatedPrice" class="result"></div>
+    </div>
+</div>
+</body>
+</html>
